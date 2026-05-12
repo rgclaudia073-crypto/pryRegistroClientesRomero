@@ -34,7 +34,13 @@ namespace pryRegistroClientesRomero
             if (IND < clientes.Length)
             {
                 Int32 i = 0;
-                while (ClienteS[IND].Codigo !=  Convert.ToInt32()
+                while (clientes[IND].Codigo != Convert.ToInt32());
+        }
+        }
+
+        private void grpCargaDatos_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

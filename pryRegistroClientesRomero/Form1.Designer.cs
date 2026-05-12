@@ -31,9 +31,9 @@ namespace pryRegistroClientesRomero
         private void InitializeComponent()
         {
             this.grpCargaDatos = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLimiteCredito = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtDeuda = new System.Windows.Forms.TextBox();
             this.txtCódigo = new System.Windows.Forms.TextBox();
             this.btnCargar = new System.Windows.Forms.Button();
             this.lblLimiteCrédito = new System.Windows.Forms.Label();
@@ -56,9 +56,9 @@ namespace pryRegistroClientesRomero
             // 
             // grpCargaDatos
             // 
-            this.grpCargaDatos.Controls.Add(this.textBox3);
-            this.grpCargaDatos.Controls.Add(this.textBox2);
-            this.grpCargaDatos.Controls.Add(this.textBox1);
+            this.grpCargaDatos.Controls.Add(this.txtLimiteCredito);
+            this.grpCargaDatos.Controls.Add(this.txtUsuario);
+            this.grpCargaDatos.Controls.Add(this.txtDeuda);
             this.grpCargaDatos.Controls.Add(this.txtCódigo);
             this.grpCargaDatos.Controls.Add(this.btnCargar);
             this.grpCargaDatos.Controls.Add(this.lblLimiteCrédito);
@@ -71,30 +71,31 @@ namespace pryRegistroClientesRomero
             this.grpCargaDatos.TabIndex = 0;
             this.grpCargaDatos.TabStop = false;
             this.grpCargaDatos.Text = "Carga de Datos";
+            this.grpCargaDatos.Enter += new System.EventHandler(this.grpCargaDatos_Enter);
             // 
-            // textBox3
+            // txtLimiteCredito
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(392, 104);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 24);
-            this.textBox3.TabIndex = 12;
+            this.txtLimiteCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLimiteCredito.Location = new System.Drawing.Point(392, 104);
+            this.txtLimiteCredito.Name = "txtLimiteCredito";
+            this.txtLimiteCredito.Size = new System.Drawing.Size(100, 24);
+            this.txtLimiteCredito.TabIndex = 12;
             // 
-            // textBox2
+            // txtUsuario
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(392, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 24);
-            this.textBox2.TabIndex = 11;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(392, 28);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 24);
+            this.txtUsuario.TabIndex = 11;
             // 
-            // textBox1
+            // txtDeuda
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(101, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 24);
-            this.textBox1.TabIndex = 10;
+            this.txtDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDeuda.Location = new System.Drawing.Point(101, 107);
+            this.txtDeuda.Name = "txtDeuda";
+            this.txtDeuda.Size = new System.Drawing.Size(100, 24);
+            this.txtDeuda.TabIndex = 10;
             // 
             // txtCódigo
             // 
@@ -121,9 +122,9 @@ namespace pryRegistroClientesRomero
             this.lblLimiteCrédito.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLimiteCrédito.Location = new System.Drawing.Point(245, 106);
             this.lblLimiteCrédito.Name = "lblLimiteCrédito";
-            this.lblLimiteCrédito.Size = new System.Drawing.Size(116, 18);
+            this.lblLimiteCrédito.Size = new System.Drawing.Size(120, 18);
             this.lblLimiteCrédito.TabIndex = 3;
-            this.lblLimiteCrédito.Text = "Limite de crédito";
+            this.lblLimiteCrédito.Text = "Limite de crédito:";
             // 
             // lblUsuario
             // 
@@ -131,9 +132,9 @@ namespace pryRegistroClientesRomero
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(245, 30);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(60, 18);
+            this.lblUsuario.Size = new System.Drawing.Size(64, 18);
             this.lblUsuario.TabIndex = 2;
-            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.Text = "Usuario:";
             // 
             // lblDeuda
             // 
@@ -141,9 +142,9 @@ namespace pryRegistroClientesRomero
             this.lblDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeuda.Location = new System.Drawing.Point(6, 106);
             this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(51, 18);
+            this.lblDeuda.Size = new System.Drawing.Size(55, 18);
             this.lblDeuda.TabIndex = 1;
-            this.lblDeuda.Text = "Deuda";
+            this.lblDeuda.Text = "Deuda:";
             // 
             // lblCódigo
             // 
@@ -151,9 +152,9 @@ namespace pryRegistroClientesRomero
             this.lblCódigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCódigo.Location = new System.Drawing.Point(5, 30);
             this.lblCódigo.Name = "lblCódigo";
-            this.lblCódigo.Size = new System.Drawing.Size(56, 18);
+            this.lblCódigo.Size = new System.Drawing.Size(60, 18);
             this.lblCódigo.TabIndex = 0;
-            this.lblCódigo.Text = "Código";
+            this.lblCódigo.Text = "Código:";
             // 
             // grpConsulta
             // 
@@ -270,9 +271,9 @@ namespace pryRegistroClientesRomero
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label lblTotalDeudas;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLimiteCredito;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtDeuda;
         private System.Windows.Forms.TextBox txtCódigo;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnDeudores;
